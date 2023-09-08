@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+ingresado como: {{request.user.username}}
+<br><br>
+<a href="{% url 'logout' %}" class="btn btn-danger">logout</a>
+{% endblock content %}

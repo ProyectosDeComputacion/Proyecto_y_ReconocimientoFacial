@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static 'login.js' %}" defer></script>
+{% endblock scripts %}
+
+{% block content %}
+<video autoplay="true" id="video-element"></video>
+
+<div id="img-element"></div>
+<div class="mt-3">
+    {% csrf_token %} 
+    <button class="btn btn-primary" id="capture-btn">Tomar Foto</button>
+    <button class="btn btn-info" id="reload-btn">reload</button>
+</div>
+{% endblock content %}
